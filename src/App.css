@@ -121,3 +121,30 @@ button:hover {
     transform: rotate(0);
   }
 }
+
+.player-wins-animation {
+  animation: player-wins infinite 2.5s linear;
+}
+
+@keyframes player-wins {
+  0% {
+    transform: rotate(0);
+    transform-origin: bottom center;
+  }
+  25% {
+    transform: rotate(-45deg);
+    transform-origin: bottom center;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: bottom center;
+  }
+  75% {
+    transform: rotate(45deg);
+    transform-origin: bottom center;
+  }
+  100% {
+    transform: rotate(0);
+    transform-origin: bottom center;
+  }
+}

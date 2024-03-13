@@ -40,13 +40,15 @@ const App = () => {
       if (player1Deck > player2Deck){
         setWinner(`Out of Cards - Player 1 Wins!!!!`);
         setPlayer2CardAnimation('card-fall-animation-right');
+        setPlayer1CardAnimation('player-wins-animation');
       } else if (player1Deck < player2Deck) {
         setWinner(`Out of Cards - Player 2 Wins!!!!`);
         setPlayer1CardAnimation('card-fall-animation-left');
+        setPlayer2CardAnimation('player-wins-animation');
       } else {
         setWinner(`Out of Cards - War Never Changes!!!!`);
-        setPlayer1CardAnimation('');
-        setPlayer2CardAnimation('');
+        setPlayer1CardAnimation('card-fall-animation-left');
+        setPlayer2CardAnimation('card-fall-animation-right');
       }
     } else {
       setPlayer1Card(data.cards[0]);
